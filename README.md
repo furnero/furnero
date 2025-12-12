@@ -1,4 +1,6 @@
-## Hi there 👋
+<p align="center">
+  <img src="https://files.pls-paw.me/api/public/dl/4yyP9K_9?inline=true" alt="Demo" width="1080">
+</p>
 
 <!--
 **furnero/furnero** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
