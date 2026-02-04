@@ -20,6 +20,8 @@ Here are some ideas to get you started:
 # 💫 About Me:
 I'm currently working on Website-things like Portfolios and Community sites but also a Minecraft community called "Orionsky".<br>Growing a Homelab as well.<br>I enjoy playing games such as Minecraft, SotF, Project Zomboid and more.<br><br>I am born in April, 2006 - and a Furry since 2019.<br>Get to know me more on https://nerowo.space :3
 
+Eurofurence Staff - Marketing, Fursuit Support, Discord
+
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/orionsky) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/nero.zhen) [![Twitch](https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white)](https://twitch.tv/nerozh3n) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/nero.zhen) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@@Nerozhen) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:fox@nerowo.space) 
