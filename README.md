@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://files.pls-paw.me/api/public/dl/4yyP9K_9?inline=true" alt="Demo" width="1080">
+  <img src="https://cloud.furryweb.eu/apps/files_sharing/publicpreview/pEwpW4JswbBGrW8?file=/&fileId=13665&x=1920&y=1080&a=true&etag=9a44027879b31ceb1032ad522e96db1b" alt="Demo" width="1080">
 </p>
 
 <!--
