@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 -->
 
 # 💫 About Me:
-I'm currently working on Website-things like Portfolios and Community sites but also a Minecraft community called "Orionsky".<br>Growing a Homelab as well.<br>I enjoy playing games such as Minecraft, SotF, Project Zomboid and more.<br><br>I am born in April, 2006 - and a Furry since 2019.<br>Get to know me more on https://nerozhen.de :3
+I'm currently working on Website-things like Portfolios and Community sites. <br>Growing a Homelab as well.<br>I enjoy playing games such as Minecraft, SotF, Project Zomboid and more.<br><br>I am born in April, 2006 - and a Furry since 2019.<br>Get to know me more on https://nerozhen.de :3
 
 Eurofurence Staff - Marketing, Fursuit Support, Discord
 
