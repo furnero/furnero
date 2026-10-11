@@ -40,11 +40,11 @@ More about me on **[nerozhen.de](https://nerozhen.de)**.
 <img src="assets/sections/stats.svg" width="100%" alt="Activity">
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/furnero/furnero/output/stats.svg" width="49%" alt="GitHub stats">
-  <img src="https://raw.githubusercontent.com/furnero/furnero/output/streak.svg" width="49%" alt="Contribution streak">
-  <img src="https://raw.githubusercontent.com/furnero/furnero/output/languages.svg" width="99%" alt="Top languages">
-  <img src="https://raw.githubusercontent.com/furnero/furnero/output/activity.svg" width="99%" alt="Contributions in the last 60 days">
-  <img src="https://raw.githubusercontent.com/furnero/furnero/output/snake.svg" width="99%" alt="Snake eating my contribution graph">
+  <img src="https://raw.githubusercontent.com/furnero/furnero/refs/heads/output/stats.svg" width="49%" alt="GitHub stats">
+  <img src="https://raw.githubusercontent.com/furnero/furnero/refs/heads/output/streak.svg" width="49%" alt="Contribution streak">
+  <img src="https://raw.githubusercontent.com/furnero/furnero/refs/heads/output/languages.svg" width="99%" alt="Top languages">
+  <img src="https://raw.githubusercontent.com/furnero/furnero/refs/heads/output/activity.svg" width="99%" alt="Contributions in the last 60 days">
+  <img src="https://raw.githubusercontent.com/furnero/furnero/refs/heads/output/snake.svg" width="99%" alt="Snake eating my contribution graph">
 </p>
 
 <img src="assets/sections/socials.svg" width="100%" alt="Socials">
