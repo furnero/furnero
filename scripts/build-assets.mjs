@@ -24,6 +24,9 @@ for (const n of LUCIDE) {
 }
 writeFileSync(join(root, 'scripts/icons.json'), JSON.stringify(icons));
 
+// Rendered width of monospace text (advance is 0.6em), letter-spacing included, so pills fit their label.
+const monoW = (str, size, spacing = 0) => str.length * (size * 0.6 + spacing) - spacing;
+
 let uid = 0;
 function nest(src, x, y, size) {
   const p = `i${uid++}-`;
@@ -90,7 +93,7 @@ function header() {
   const chips = ['EST. 2006', 'FURRY SINCE 2019', 'EUROFURENCE STAFF', 'BUG HUNTER @ PAWHOST'];
   let cx = 60, chipSvg = '';
   for (const c of chips) {
-    const w = c.length * 12 * 0.6 + 26;
+    const w = Math.ceil(monoW(c, 12, 0.5)) + 32;
     chipSvg += `<rect x="${cx}" y="292" width="${w}" height="26" rx="13" fill="${C.panel2}" stroke="${C.line}"/><circle cx="${cx + 12}" cy="305" r="3" fill="${C.fox}"/><text x="${cx + 20}" y="309.5" class="chip">${esc(c)}</text>`;
     cx += w + 10;
   }
@@ -167,7 +170,7 @@ function project(id, { title, link, desc, tags, mark, accent = C.fox }) {
   const css = `.t{font:700 22px G7,sans-serif;fill:${C.text}}.u{font:400 12.5px M4,monospace;fill:${C.muted}}.d{font:500 15px G5,sans-serif;fill:#c3cbd9}.g{font:700 11px M7,monospace;fill:${accent};letter-spacing:.6px}`;
   let tx = 22, tagSvg = '';
   for (const t of tags) {
-    const w = t.length * 11 * 0.6 + 18;
+    const w = Math.ceil(monoW(t, 11, 0.6)) + 18;
     tagSvg += `<rect x="${tx}" y="146" width="${w}" height="22" rx="6" fill="${accent}" fill-opacity=".09" stroke="${accent}" stroke-opacity=".35"/><text x="${tx + 9}" y="161" class="g">${esc(t)}</text>`;
     tx += w + 8;
   }
@@ -186,7 +189,7 @@ async function stackRow(label, ids) {
   for (let i = 0; i < ids.length; i++) icons += await stackIcon(ids[i], X0 + i * (S + GAP), 8, S);
   const css = `.l{font:700 12px M7,monospace;fill:${C.muted};letter-spacing:1.2px}`;
   const body = `<rect x="0" y="27" width="8" height="8" rx="2" fill="${C.fox}"/><text x="18" y="35.5" class="l">${esc(label.toUpperCase())}</text>` +
-    `<rect x="150" y="30.5" width="22" height="1" fill="${C.line}"/>` + icons;
+    `<rect x="162" y="30.5" width="16" height="1" fill="${C.line}"/>` + icons;
   return svg(W, H, { title: `${label}: ${ids.map((i) => i.replace('si:', '')).join(', ')}`, fonts: ['M7'], css }, body);
 }
 
@@ -214,7 +217,7 @@ async function gamesRow(slugs) {
     x += S + 8;
   }
   const css = `.l{font:700 12px M7,monospace;fill:${C.muted};letter-spacing:1.2px}`;
-  const body = `<rect x="0" y="23" width="8" height="8" rx="2" fill="${C.violet}"/><text x="18" y="31.5" class="l">PLAYS ON</text><rect x="150" y="26.5" width="22" height="1" fill="${C.line}"/>` + tiles;
+  const body = `<rect x="0" y="23" width="8" height="8" rx="2" fill="${C.violet}"/><text x="18" y="31.5" class="l">PLAYS ON</text><rect x="162" y="26.5" width="16" height="1" fill="${C.line}"/>` + tiles;
   return svg(W, H, { title: `Plays on: ${slugs.join(', ')}`, fonts: ['M7'], css }, body);
 }
 
