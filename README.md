@@ -53,7 +53,6 @@ More about me on **[nerozhen.de](https://nerozhen.de)**.
   <a href="https://discordapp.com/users/683815400835645527"><img src="assets/socials/discord.svg" width="52" alt="Discord"></a>
   <a href="https://instagram.com/nero.zhen"><img src="assets/socials/instagram.svg" width="52" alt="Instagram"></a>
   <a href="https://twitch.tv/nerozh3n"><img src="assets/socials/twitch.svg" width="52" alt="Twitch"></a>
-  <a href="https://x.com/nero.zhen"><img src="assets/socials/x.svg" width="52" alt="X"></a>
   <a href="https://youtube.com/@Nerozhen"><img src="assets/socials/youtube.svg" width="52" alt="YouTube"></a>
   <a href="https://www.curseforge.com/members/nerozhen/projects"><img src="assets/socials/curseforge.svg" width="52" alt="CurseForge"></a>
   <a href="mailto:fox@furryweb.eu"><img src="assets/socials/mail.svg" width="52" alt="Email"></a>

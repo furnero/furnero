@@ -284,7 +284,7 @@ for (const g of ['steam', 'playstation', 'xbox', 'battledotnet', 'epicgames', 'u
 }
 out('assets/stack/games.svg', await gamesRow(games));
 
-const SOCIALS = [['discord', 'Discord'], ['instagram', 'Instagram'], ['twitch', 'Twitch'], ['x', 'X'], ['youtube', 'YouTube'], ['curseforge', 'CurseForge'], ['mail', 'Email', 'mail'], ['web', 'nerozhen.de', 'globe']];
+const SOCIALS = [['discord', 'Discord'], ['instagram', 'Instagram'], ['twitch', 'Twitch'], ['youtube', 'YouTube'], ['curseforge', 'CurseForge'], ['mail', 'Email', 'mail'], ['web', 'nerozhen.de', 'globe']];
 for (const [s, l, lu] of SOCIALS) out(`assets/socials/${s}.svg`, await social(s, l, lu));
 
 out('assets/support/paypal.svg', await paypal());
