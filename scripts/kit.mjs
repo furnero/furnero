@@ -13,8 +13,8 @@ export const C = {
   text: '#e8edf5',
   muted: '#8892a6',
   dim: '#4b5468',
-  fox: '#ff8a3d',
-  fox2: '#ffb46b',
+  accent: '#4c9dff',
+  accent2: '#8cc4ff',
   violet: '#a78bfa',
   teal: '#5eead4',
 };
@@ -45,7 +45,7 @@ export function svg(w, h, { title, fonts = [], css = '', defs = '' }, body) {
 }
 
 // Card background: dark panel, hairline border, faint top glow in the accent colour.
-export function cardBg(w, h, id, accent = C.fox) {
+export function cardBg(w, h, id, accent = C.accent) {
   return `<defs><linearGradient id="${id}-glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${accent}" stop-opacity=".10"/><stop offset=".55" stop-color="${accent}" stop-opacity="0"/></linearGradient>` +
     `<linearGradient id="${id}-edge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="${accent}" stop-opacity="0"/><stop offset=".5" stop-color="${accent}" stop-opacity=".9"/><stop offset="1" stop-color="${accent}" stop-opacity="0"/></linearGradient></defs>` +
     `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="${C.panel}" stroke="${C.line}"/>` +
@@ -63,7 +63,7 @@ export function icon(name, x, y, size, color) {
 }
 
 // Square icon tile used for section headers and small badges.
-export function tile(x, y, size, iconName, color = C.fox) {
+export function tile(x, y, size, iconName, color = C.accent) {
   const pad = size * 0.24;
   return `<rect x="${x + 0.5}" y="${y + 0.5}" width="${size - 1}" height="${size - 1}" rx="${size * 0.26}" fill="${C.panel2}" stroke="${C.line}"/>` +
     icon(iconName, x + pad, y + pad, size - pad * 2, color);
