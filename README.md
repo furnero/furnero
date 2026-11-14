@@ -67,4 +67,4 @@ More about me on **[nerozhen.de](https://nerozhen.de)**.
 
 <img src="assets/footer.svg" width="100%" alt="">
 
-<p align="center"><img src="https://komarev.com/ghpvc/?username=furnero&label=profile%20views&color=ff8a3d&style=flat-square" alt="Profile views"></p>
+<p align="center"><img src="https://komarev.com/ghpvc/?username=furnero&label=profile%20views&color=4c9dff&style=flat-square" alt="Profile views"></p>

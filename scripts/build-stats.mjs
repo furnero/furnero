@@ -49,7 +49,7 @@ const langTotal = langList.reduce((s, [, v]) => s + v.size, 0) || 1;
 const fmt = (n) => n >= 1000 ? `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k` : String(n);
 const updated = new Date().toISOString().slice(0, 10);
 
-const head = (x, y, title, iconName, color = C.fox) =>
+const head = (x, y, title, iconName, color = C.accent) =>
   tile(x, y, 30, iconName, color) + `<text x="${x + 42}" y="${y + 20}" class="h">${esc(title)}</text>`;
 const baseCss = `.h{font:700 13px M7,monospace;fill:${C.muted};letter-spacing:1.2px}.v{font:700 24px G7,sans-serif;fill:${C.text}}` +
   `.k{font:400 12px M4,monospace;fill:${C.muted}}.f{font:400 10.5px M4,monospace;fill:${C.dim}}` +
@@ -69,7 +69,7 @@ function statsCard() {
   const body = cardBg(W, H, 'st') + head(22, 18, 'GITHUB STATS', 'code') +
     items.map(([k, v, ic], i) => {
       const x = 22 + (i % 2) * 196, y = 70 + Math.floor(i / 2) * 44;
-      return `<g class="in" style="animation-delay:${i * 0.08}s">${icon(ic, x, y + 4, 18, i % 2 ? C.violet : C.fox)}<text x="${x + 28}" y="${y + 19}" class="v" style="font-size:20px">${v}</text><text x="${x + 28}" y="${y + 35}" class="k">${esc(k)}</text></g>`;
+      return `<g class="in" style="animation-delay:${i * 0.08}s">${icon(ic, x, y + 4, 18, i % 2 ? C.violet : C.accent)}<text x="${x + 28}" y="${y + 19}" class="v" style="font-size:20px">${v}</text><text x="${x + 28}" y="${y + 35}" class="k">${esc(k)}</text></g>`;
     }).join('') + `<text x="${W - 22}" y="38" class="f" text-anchor="end">updated ${updated}</text>`;
   return svg(W, H, { title: `GitHub stats: ${total} contributions in the last year`, fonts: ['G7', 'M4', 'M7'], css: baseCss }, body);
 }
@@ -81,11 +81,11 @@ function streakCard() {
   const css = baseCss + `.big{font:700 34px G7,sans-serif;fill:${C.text}}.ring{stroke-dasharray:${circ.toFixed(1)};stroke-dashoffset:${circ.toFixed(1)};animation:draw 1.4s ease-out .2s forwards}` +
     `@keyframes draw{to{stroke-dashoffset:${(circ * (1 - frac)).toFixed(1)}}}.fl{transform-origin:${cx}px ${cy - r}px;animation:fl 1.6s ease-in-out infinite}@keyframes fl{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}`;
   const side = (x, val, label) => `<g class="in"><text x="${x}" y="${cy + 4}" class="v" text-anchor="middle">${fmt(val)}</text><text x="${x}" y="${cy + 24}" class="k" text-anchor="middle">${esc(label)}</text></g>`;
-  const defs = `<linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.fox}"/><stop offset="1" stop-color="${C.violet}"/></linearGradient>`;
+  const defs = `<linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.accent}"/><stop offset="1" stop-color="${C.violet}"/></linearGradient>`;
   const body = cardBg(W, H, 'sk') + head(22, 18, 'STREAK', 'flame') +
     `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${C.line}" stroke-width="7"/>` +
     `<circle class="ring" cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="url(#rg)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 ${cx} ${cy})"/>` +
-    `<g class="fl">${icon('flame', cx - 11, cy - r - 13, 22, C.fox)}</g>` +
+    `<g class="fl">${icon('flame', cx - 11, cy - r - 13, 22, C.accent)}</g>` +
     `<text x="${cx}" y="${cy + 12}" class="big" text-anchor="middle">${current}</text><text x="${cx}" y="${cy + r + 26}" class="k" text-anchor="middle">current streak (days)</text>` +
     side(70, total, 'total (1y)') + side(W - 70, longest, 'longest streak') +
     `<text x="${W - 22}" y="38" class="f" text-anchor="end">updated ${updated}</text>`;
@@ -137,12 +137,12 @@ function activityCard() {
   const best = weeks.reduce((m, w, i) => (w.n > weeks[m].n ? i : m), 0);
   const css = baseCss + `.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .7s cubic-bezier(.2,.8,.2,1) forwards}@keyframes grow{to{transform:scaleY(1)}}` +
     `.pk{animation:pk 1.8s ease-in-out infinite}@keyframes pk{0%,100%{opacity:.25}50%{opacity:.9}}`;
-  const defs = `<linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.fox2}"/><stop offset="1" stop-color="${C.fox}" stop-opacity=".55"/></linearGradient>`;
+  const defs = `<linearGradient id="bf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C.accent2}"/><stop offset="1" stop-color="${C.accent}" stop-opacity=".55"/></linearGradient>`;
   const bx = L + best * slot + slot / 2;
   const body = cardBg(W, H, 'ac') + head(22, 18, 'CONTRIBUTIONS  ·  PER WEEK, LAST 12 MONTHS', 'activity') +
     `<text x="${W - 22}" y="38" class="k" text-anchor="end"><tspan style="fill:${C.text}">${total}</tspan> contributions</text>` +
     grid + bars + labels +
-    (weeks[best].n ? `<circle class="pk" cx="${bx.toFixed(1)}" cy="${(py(weeks[best].n) - 12).toFixed(1)}" r="5" fill="${C.fox}"/>` : '');
+    (weeks[best].n ? `<circle class="pk" cx="${bx.toFixed(1)}" cy="${(py(weeks[best].n) - 12).toFixed(1)}" r="5" fill="${C.accent}"/>` : '');
   return svg(W, H, { title: `${total} contributions in the last 12 months`, fonts: ['M4', 'M7'], css, defs }, body);
 }
 
